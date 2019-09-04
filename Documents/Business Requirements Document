@@ -1,80 +1,114 @@
-Primary Market Research
+Business Requirements
 
-Through the survey given out to social media users of differing age that consisted of age demographics, preferred features among different age gaps, communication through instant messaging, and social media that uses GPS location as one of its features, the results can be analyzed and summarized.
+Product Description:
+
+A messaging application that focuses on creating new connections with people via IM, maintaining existing connections with friends with mutual interests via GPS, while allowing the user to post statuses and pictures of their daily lives. Our product is a combination of several existing messaging/social media apps such as Facebook Messenger and SnapChat.
+
+
+Primary Market Research:
+
+Through the survey given out to social media users of differing age groups that consisted of age demographics, preferred features among different age gaps, communication through instant messaging, and social media that uses GPS location as one of its features, the results can be analyzed and summarized.
 
 With the results found, they can be summarized as:
 
 Age Demographics
 
-? 41% of users are of the age 13 - 17
 
-? 45% of users are of the age 18 - 25
+41% of users are of the age 13 - 17
 
-? 14% of users are of the age 26 - older
+
+45% of users are of the age 18 - 25
+
+
+14% of users are of the age 26 - older
 
 Preferred Features Among Different Age Gaps
 
-? Teenagers prefer entertainment, messaging, and posting statuses
 
-? Young adults prefer messaging and posting statuses
+Teenagers prefer entertainment, messaging, and posting statuses
 
-? Older adults prefer news and messages
+
+Young adults prefer messaging and posting statuses
+
+
+Older adults prefer news and messages
 
 Communication Through Instant Messaging
 
-? Teenagers tend to message friends a lot
 
-? Young adults prefer to message friends, families, and, in some occasions, connections (strangers)
+Teenagers tend to message friends a lot
 
-? Older adults tend to message families a lot
+
+Young adults prefer to message friends, families, and, in some occasions, connections (strangers)
+
+
+Older adults tend to message families a lot
 
 Social Media That Uses GPS Location As One Of Its Features
 
-? Teenagers doesn’t know much about the GPS features on social media
 
-? Young adults prefer making new connections and friends through GPS related social media
-
-? Similar to teenagers, older adults don’t know much about the GPS features on social media
+Teenagers doesnâ€™t know much about the GPS features on social media
 
 
+Young adults prefer making new connections and friends through GPS related social media
 
 
+Similar to teenagers, older adults donâ€™t know much about the GPS features on social media
 
 Secondary Market Research
 
+Competitors
+
+There are several competitors in the market today. The main competitors are SnapChat, Facebook, Instagram, Pinterest, LinkedIn, WhatsApp, and Twitter.
+
+Players
+
+There are many players in the market for this kind of product. They range from competitors, customers, and influencers.
+
+
 Instant Messaging (IM)
 
-? IM allows users to maintain contact with friends and family members regardless of location via visual/textual messages, and allows real-time-talk with an easy-to-read record of user-to-user/user-to-group message history
+IM allows users to maintain contact with friends and family members regardless of location via visual/textual messages, and allows real-time-talk with an easy-to-read record of user-to-user/user-to-group message history
 
-? There are over 1.6 billion monthly active users of mobile messenger apps that use IM. Of those 1.6 billion active users, there are about 186 million actives users that uses IM that can send a visual message.
 
-? On average, approximately 80% of US internet users between the ages of 18-65 use communication platforms with IM functionality such as Facebook Messenger, WhatsApp, SnapChat, etc.
+There are over 1.6 billion monthly active users of mobile messenger apps that use IM. Of those 1.6 billion active users, there are about 186 million actives users that uses IM that can send a visual message.
 
-? Of those 80% of US internet users between the ages of 18 - 65, the majority age group spans between ages 13 - 29 years old.
 
-? Approximately 2 billion mobile phone messaging app users worldwide from 2018 show projected growth of 3 billion users by 2023 for apps that use IM.
+On average, approximately 80% of US internet users between the ages of 18-65 use communication platforms with IM functionality such as Facebook Messenger, WhatsApp, SnapChat, etc.
 
-? As of July 2019, there is a growth market for apps that use IM, demonstrating the necessity and importance of its implementation in communication platforms, spanning the next 5 - 10 years.
 
-? Growing demand for communication and social media platforms expected to drive market for products utilizing IM.
+Of those 80% of US internet users between the ages of 18 - 65, the majority age group spans between ages 13 - 29 years old.
 
-? Messaging apps have the most users 
+
+Approximately 2 billion mobile phone messaging app users worldwide from 2018 show projected growth of 3 billion users by 2023 for apps that use IM.
+
+
+As of July 2019, there is a growth market for apps that use IM, demonstrating the necessity and importance of its implementation in communication platforms, spanning the next 5 - 10 years.
+
+
+Growing demand for communication and social media platforms expected to drive market for products utilizing IM.
+
+
+Messaging apps have the most users 
+
 
 
 Preferred Mediums of Communication Between Friends
 
-? 75% of teenagers own cell phones, and 25% use them for social media, 54% for texting and 24% for instant messaging (Hinduja & Patchin, 2007).
 
-? Social media sites provide children with the opportunity to stay connected to friends and family, make new friends, share pictures and exchange ideas.
+75% of teenagers own cell phones, and 25% use them for social media, 54% for texting and 24% for instant messaging (Hinduja & Patchin, 2007).
 
-? Facebook and other similar sites allow students to gather outside of school and exchange ideas about assignments or collaborate on group projects (Borja, 2005).
 
-? 88% of Americans ages 18-29 use social media
+Social media sites provide children with the opportunity to stay connected to friends and family, make new friends, share pictures and exchange ideas.
 
-? In 2015, the number of worldwide Instant Messaging (IM) accounts, not including Mobile Messaging, totals over 3.2 billion. This figure is expected to grow at an average annual rate of about 4% over the next four years, and reach over 3.8 billion by the end of 2019. 
 
-? FB messenger is the 2nd highest in social media platform penetration
+Facebook and other similar sites allow students to gather outside of school and exchange ideas about assignments or collaborate on group projects (Borja, 2005).
 
+88% of Americans ages 18-29 use social media
+
+In 2015, the number of worldwide Instant Messaging (IM) accounts, not including Mobile Messaging, totals over 3.2 billion. This figure is expected to grow at an average annual rate of about 4% over the next four years, and reach over 3.8 billion by the end of 2019. 
+
+FB messenger is the 2nd highest in social media platform penetration
 
 
 
@@ -82,22 +116,57 @@ Preferred Mediums of Communication Between Friends
 
 Global Positioning System (GPS)
 
-? The key factors contributing to the growth of the global GPS market include increasing demand of GPS enabled devices, rising adoption of GPS technology in transportation and logistics, a growing number of a multifunctional mobile devices such as smartphones and tablet, and low cost and easy integration into other technologies
 
-? Electronic data retention and privacy concerns serve as a barrier to the growth of the market.
+The key factors contributing to the growth of the global GPS market include increasing demand of GPS enabled devices, rising adoption of GPS technology in transportation and logistics, a growing number of a multifunctional mobile devices such as smartphones and tablet, and low cost and easy integration into other technologies
 
-? North America is estimated to hold a dominant position in the global GPS market attributed to the increasing demand for GPS enabled devices and rising adoption of GPS technology in transportation and logistics.
 
-? Some of the key players operating in the global GPS market include Google Inc., MiTAC International Corp., Garmin Ltd., Starcom Systems Ltd., and others
+Electronic data retention and privacy concerns serve as a barrier to the growth of the market.
 
-? As the manner of primary data collection, the collection of GPS data is more advantage than other methods of data collection.
 
-? According to market survey, 900 million mobile phones that incorporated GPS were sold globally in 2012.
+North America is estimated to hold a dominant position in the global GPS market attributed to the increasing demand for GPS enabled devices and rising adoption of GPS technology in transportation and logistics.
 
-? For example, it could track people's movement thus obtaining accurate information on their everyday habits, including shopping habits, driving habits and so on
 
-? Market Research Future (MRFR) has published a report asserting that the global GPS Tracking Device System Industry is marked to expand remarkably at a CAGR of 11.9% during the forecast period of 2017-2023 and reach the market valuation of USD 2.53 Bn by the end of the forecast period.
+Some of the key players operating in the global GPS market include Google Inc., MiTAC International Corp., Garmin Ltd., Starcom Systems Ltd., and others
+
+
+As the manner of primary data collection, the collection of GPS data is more advantage than other methods of data collection.
+
+
+According to market survey, 900 million mobile phones that incorporated GPS were sold globally in 2012.
+
+
+For example, it could track people's movement thus obtaining accurate information on their everyday habits, including shopping habits, driving habits and so on
+
+
+Market Research Future (MRFR) has published a report asserting that the global GPS Tracking Device System Industry is marked to expand remarkably at a CAGR of 11.9% during the forecast period of 2017-2023 and reach the market valuation of USD 2.53 Bn by the end of the forecast period.
                   	         
+Making Friends as Adults
+62% of adults in the U.S. have 2 - 5 close friends
+
+
+1 in 5 adults feel lonely
+
+
+42% of adults make their friends in the workplace
+
+
+35% of adults meet their closest friends through other friends
+
+
+29% of adults meet their friends in their neighborhood
+
+
+Most people become friends with those who are like them
+
+
+81% of teens (13-19) interact with those who do not share the same beliefs
+
+
+76% of teens believe that their friends contribute to their sense of self more than their family
+
+
+86% of teens meet their friends in class at school 
+
 
 Sources
 
@@ -107,4 +176,4 @@ https://newyorkbehavioralhealth.com/the-impact-of-social-media-use-on-social-ski
 https://www.reuters.com/brandfeatures/venture-capital/article?id=99884
 https://mpk732t12016clusterb.wordpress.com/2016/04/18/does-gps-technology-bring-value-on-marketing-research/
 https://www.marketwatch.com/press-release/gps-market-global-industry-analysis-size-share-growth-trends-and-forecast-2019---2023-2019-02-25
-
+https://www.barna.com/research/friends-loneliness/
