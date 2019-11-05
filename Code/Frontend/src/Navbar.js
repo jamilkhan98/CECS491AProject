@@ -1,3 +1,4 @@
+//Need to modify this one
 import React from "react"
 // import Background from "./psBackgroundImg.jpg"
 
@@ -11,7 +12,7 @@ function Navbar(){
     display: "inline-block",
     textAlign: "center",
     position: "relative",
-    boxSizing: "inherit"
+    boxSizing: "border-box"
     // backgroundImage: "url(" +  Background  + ")"
   }
 
@@ -22,13 +23,18 @@ function Navbar(){
     return(
       <span>
         <form class = "container-fluid" style = {styles}>
-          Username
-          <input type="text"></input>
-          <br/><br/>
-          Password 
+          Username: 
           <input type="text"></input>
           <br/>
-          <input type="submit" value="Submit"></input>
+          <br/>
+          Password: 
+          <input type="text"></input>
+          <br/>
+          <br/>
+          <input type="submit" value="Sign in"></input>
+          <br/>
+          <br/>
+          <input type="submit" value="Sign in with Google"></input>
         </form>
       </span>
 

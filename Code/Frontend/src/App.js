@@ -1,3 +1,4 @@
+//Need to modify this one
 import React from 'react';
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +7,7 @@ import Background from "./psBackgroundImg.jpg"
 import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
+import HelloWorldApp from './HelloWorldApp';
 
 function App() {  
 
@@ -25,5 +27,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
