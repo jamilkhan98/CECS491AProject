@@ -1,32 +1,36 @@
-//Need to modify this one
-import React from 'react';
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Background from "./psBackgroundImg.jpg"
-import Navbar from './Navbar';
-import Header from './Header';
-import Footer from './Footer';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './Home';
+import { About } from './About';
+import { Contact } from './Contact';
+import CreateAccount from './CreateAccount';
+import { NoMatch } from './NoMatch';
+import { Layout } from './components/Layout';
+import { NavigationBar } from './components/NavigationBar';
+import { Jumbotron } from './components/Jumbotron';
+class App extends Component {
 
-function App() {  
-
-  const styles2 = {
-    backgroundSize: "cover",
-    backgroundImage: "url(" +  Background  + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "fixed",
-
-    minHeight: "100%",
-    minWidth: "100%"
+  render(){
+    return (
+      <div className="App">
+        <React.Fragment>
+          <NavigationBar />
+          <Jumbotron />
+          <Layout>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/createAccount" component={CreateAccount} />
+                <Route component={NoMatch} />
+              </Switch>
+            </Router>
+          </Layout>
+        </React.Fragment>
+      </div>
+    );
   }
-
-  return (
-    <div class = "container-fluid" style = {styles2}>
-      <Navbar />
-    </div>
-  );
 }
-
-
 
 export default App;

@@ -20,39 +20,3 @@
 .App-link {
   color: #09d3ac;
 }
-
-/*
-Above is default.
-
-EDITS SHOULD NOT BE MADE TO ABOVE SECTIONS.
-
-Below has been added.
-
-ONLY EDIT BELOW SECTIONS.
-*/
-
-navbar{
-  margin: 15px;
-}
-
-header{
-  margin: 15px;
-}
-
-footer{
-  margin: 15px;
-}
-/*
-a:link, a:visited {
-  background-color: green;
-  border: 5px solid red;
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-  margin: 30px;
-}
-
-a:hover, a:active {
-  background-color: red;
-}
-*/
