@@ -8,7 +8,8 @@ import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
-import SignIn from './SignIn';
+import Login from './Login';
+import PasswordRecovery from './PasswordRecovery';
 class App extends Component {
 
   render(){
@@ -24,7 +25,8 @@ class App extends Component {
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/createAccount" component={CreateAccount} />
-                <Route path="/signIn" component={SignIn} />
+                <Route path="/login" component={Login} />
+                <Route path="/passwordRecovery" component={PasswordRecovery} />
                 <Route component={NoMatch} />
               </Switch>
             </Router>

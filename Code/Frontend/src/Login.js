@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "./CreateAccount.css"
-import styled from 'styled-components';
+import "./Login.css"
 import { Nav, Navbar } from 'react-bootstrap';
+import styled from 'styled-components';
 
 const Styles = styled.div `
     .nav-link {
@@ -12,6 +12,7 @@ const Styles = styled.div `
         }
     }
 `;
+
 const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
@@ -32,19 +33,15 @@ const formValid = ({formErrors, ...rest}) => {
     return valid;
 }
 
-class CreateAccount extends Component {
+class Login extends Component {
 
     constructor(props){
         super(props);
 
         this.state = {
-            firstName: null,
-            lastName: null,
             email: null,
             password: null,
             formErrors:{
-                firstName: "",
-                lastName: "",
                 email: "",
                 password: ""
             }
@@ -57,8 +54,6 @@ class CreateAccount extends Component {
         if(formValid(this.state)){
             console.log(`
                 --SUBMITTING--
-                First Name: ${this.state.firstName}
-                Last Name: ${this.state.lastName}
                 Email: ${this.state.email}
                 Password: ${this.state.password}
             `);
@@ -73,12 +68,6 @@ class CreateAccount extends Component {
         let formErrors = this.state.formErrors;
 
         switch(name){
-            case 'firstName':
-                formErrors.firstName = value.length < 3 ? "minimum 3 characters required" : "";
-                break;
-            case 'lastName':
-                formErrors.lastName = value.length < 3 ? "minimum 3 characters required" : "";
-                break;
             case 'email':
                 formErrors.email = emailRegex.test(value) ? '' : 'invalid email address';
                 break;
@@ -97,36 +86,8 @@ class CreateAccount extends Component {
         return (
             <div className="wrapper">
                 <div className="form-wrapper">
-                    <h1>Create Account</h1>
+                    <h1>Login</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
-                        <div className="firstName">
-                            <label htmlFor="firstName">First Name</label>
-                            <input 
-                                className={formErrors.firstName.length > 0 ? "error" : null}
-                                placeholder="First Name"
-                                type="text"
-                                name="firstName"
-                                noValidate
-                                onChange={this.handleChange}
-                            />
-                            {formErrors.firstName.length > 0 && (
-                                <span className="errorMessage">{formErrors.firstName}</span>
-                            )}
-                        </div>
-                        <div className="lastName">
-                            <label htmlFor="lastName">Last Name</label>
-                            <input 
-                                className={formErrors.lastName.length > 0 ? "error" : null}
-                                placeholder="Last Name"
-                                type="text"
-                                name="lastName"
-                                noValidate
-                                onChange={this.handleChange}
-                            />
-                            {formErrors.lastName.length > 0 && (
-                                <span className="errorMessage">{formErrors.lastName}</span>
-                            )}
-                        </div>
                         <div className="email">
                             <label htmlFor="email">Email</label>
                             <input 
@@ -155,10 +116,11 @@ class CreateAccount extends Component {
                                 <span className="errorMessage">{formErrors.password}</span>
                             )}
                         </div>
-                        <div className="createAccount">
-                            <button type="submit">Create Account</button>
+                        <div className="login">
+                            <button type="submit">Sign In</button>
                             <Styles>
-                                <small><Nav.Link href="/login">Already have an Account?</Nav.Link></small>
+                                <small><Nav.Link href="/createAccount">Don't have an Account?</Nav.Link></small>
+                                <small><Nav.Link href="/passwordRecovery">Forgot Password?</Nav.Link></small>
                             </Styles>
                         </div>
                     </form>
@@ -168,4 +130,4 @@ class CreateAccount extends Component {
     }
 }
 
-export default CreateAccount;
+export default Login;
