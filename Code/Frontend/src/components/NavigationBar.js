@@ -14,11 +14,14 @@ const Styles = styled.div `
             color: white;
         }
     }
+    .icon-bar {
+        color: #bbb;
+    }
 `;
 
 export const NavigationBar = () => (
     <Styles>
-        <Navbar expand="lg">
+        <Navbar expand="lg" variant="dark">
             <Navbar.Brand href="/">Pick-Up Sportz</Navbar.Brand>
             <Navbar.Toggle aria-controls ="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +30,7 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/createAccount">Create Account</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/signIn">Sign In</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/login">Login</Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
