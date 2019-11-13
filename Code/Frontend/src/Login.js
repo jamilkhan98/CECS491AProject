@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Login.css"
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const Styles = styled.div `

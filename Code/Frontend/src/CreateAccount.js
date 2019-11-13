@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./CreateAccount.css"
 import styled from 'styled-components';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 const Styles = styled.div `
     .nav-link {
