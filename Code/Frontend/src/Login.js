@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Styles = styled.div `
     .nav-link {
-        color: #bbb;
+        color: blue;
 
         &:hover{
             color: red;

@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 
 const Styles = styled.div `
     .nav-link {
-        color: #bbb;
+        color: blue;
 
         &:hover{
             color: red;
