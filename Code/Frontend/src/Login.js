@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "./Login.css"
+import "./Page.css"
 import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const Styles = styled.div `
     .nav-link {
-        color: blue;
-
+        color: black;
+        text-align: center;
         &:hover{
             color: red;
         }
@@ -84,8 +84,8 @@ class Login extends Component {
     render() {
         const {formErrors} = this.state;
         return (
-            <div className="wrapper">
-                <div className="form-wrapper">
+            <div className="login-wrapper">
+                <div className="login-form-wrapper">
                     <h1>Login</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
                         <div className="email">

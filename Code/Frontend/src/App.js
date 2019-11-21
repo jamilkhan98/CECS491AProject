@@ -9,7 +9,9 @@ import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import Login from './Login';
+import { Schedule } from './Schedule';
 import PasswordRecovery from './PasswordRecovery';
+
 class App extends Component {
 
   render(){
@@ -27,6 +29,7 @@ class App extends Component {
                 <Route path="/createAccount" component={CreateAccount} />
                 <Route path="/login" component={Login} />
                 <Route path="/passwordRecovery" component={PasswordRecovery} />
+                <Route path="/schedule" component={Schedule} />
                 <Route component={NoMatch} />
               </Switch>
             </Router>
