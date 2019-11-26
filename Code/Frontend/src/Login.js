@@ -6,7 +6,7 @@ import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 firebase.initializeApp({
-    apiKey: "AIzaSyDIi8P1tuPgJ41M8EjHLNTEEzF0MsUZjXM",
+    apiKey: "",
     authDomain:"pick-up-sportz-89c6e.firebaseapp.com"
 })
 
