@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "./PasswordRecovery.css"
+import "./Page.css"
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
 
 const Styles = styled.div `
     .nav-link {
-        color: blue;
-
+        color: black;
+        text-align: center;
         &:hover{
             color: red;
         }
@@ -77,8 +77,8 @@ class PasswordRecovery extends Component {
     render() {
         const {formErrors} = this.state;
         return (
-            <div className="wrapper">
-                <div className="passwordRecoveryform-wrapper">
+            <div className="password-recovery-wrapper">
+                <div className="password-recovery-form-wrapper">
                     <h1>Password Recovery</h1>
                     <p>Please enter your email so that we can send you a link to reset your forgotten password.</p>
                     <form onSubmit={this.handleSubmit} noValidate>
