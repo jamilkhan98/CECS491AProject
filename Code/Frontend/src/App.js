@@ -8,7 +8,7 @@ import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
-import Login  from './testLogin';
+import Login  from './Login';
 import PasswordRecovery from './PasswordRecovery';
 import CreateProfile from './CreateProfile';
 import { LoggedInNavBar } from './components/LoggedInNavBar';
