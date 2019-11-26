@@ -16,8 +16,8 @@ light green: #A3C4BC
     align-items: center;
   }
   
-  .form-wrapper {
-    width: 400px;
+  .event-form-wrapper {
+    width: 600px;
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
@@ -70,70 +70,73 @@ light green: #A3C4BC
     font-size: 0.75em;
     display: relative;
   }
-  
-  .firstName {
+
+
+  .date {
+    margin-right: 5%;
+  }
+
+  .startTime{
     margin-right: 1%;
   }
   
-  .lastName {
-    margin-left: 1%;
+  .startTime,
+  .endTime {
+    margin-left: 2%;
   }
   
-  .firstName,
-  .lastName,
-  .email,
-  .password {
+  .title,
+  .sport,
+  .location,
+  .date,
+  .startTime,
+  .endTime {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
   }
-
-  .firstName,
-  .lastName {
-    width: 49%;
+  
+  .date,
+  .startTime,
+  .endTime {
+    width: 30%;
   }
   
-  .email,
-  .password {
+  .title {
+    width: 65%;
+    margin-right: 5%;
+  }
+
+  .sport {
+    width: 30%;
+  }
+
+  .location {
     width: 100%;
   }
   
-  .createAccount {
+  .createEvent {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .createAccount button {
+  .createEvent button {
     background-color: seagreen;
     color: #fff;
     border: 2px solid #fff;
-    width: 50%;
+    width: 60%;
     margin-top: 1em;
-    padding: 2px 0px;
+    padding: 8px 0px;
     font-size: 1em;
     font-weight: lighter;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
   }
   
-  .createAccount button:hover {
+  .createEvent button:hover {
     color: #519e8a;
     background-color: #e6fed0;
     border: 2px solid #519e8a;
   }
-  
-  .createAccount big {
-    color: #999;
-    font-weight: lighter;
-    text-align: center;
-  }
-
-#normal{
-    color: white;
-}
-
-#normal:hover{
-    color: #519e8a;
-}

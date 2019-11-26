@@ -1,0 +1,56 @@
+.schedule-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    padding: 20px;
+}
+.schedule-footer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.schedule button{
+    background-color: seagreen;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 95%;
+    margin-top: 1em;
+    padding: 100px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+}
+
+.schedule-footer button{
+    background-color: seagreen;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 30%;
+    margin-top: 1em;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+}
+
+.schedule {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule button:hover, .schedule-footer button:hover {
+    color: #519e8a;
+    background-color: #e6fed0;
+    border: 2px solid #519e8a;
+}

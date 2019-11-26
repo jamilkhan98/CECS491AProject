@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "./Page.css"
+import "./CreateAccount.css"
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
 
 const Styles = styled.div `
     .nav-link {
-        color: black;
-        text-align: center;
+        color: green;
+
         &:hover{
             color: red;
         }
@@ -46,7 +46,7 @@ class CreateAccount extends Component {
                 firstName: "",
                 lastName: "",
                 email: "",
-                password: ""
+                password: "",
             }
         };
     }
@@ -74,10 +74,10 @@ class CreateAccount extends Component {
 
         switch(name){
             case 'firstName':
-                formErrors.firstName = value.length < 3 ? "minimum 3 characters required" : "";
+                formErrors.firstName = value.length < 2 ? "minimum 2 characters required" : "";
                 break;
             case 'lastName':
-                formErrors.lastName = value.length < 3 ? "minimum 3 characters required" : "";
+                formErrors.lastName = value.length < 2 ? "minimum 2 characters required" : "";
                 break;
             case 'email':
                 formErrors.email = emailRegex.test(value) ? '' : 'invalid email address';
@@ -95,8 +95,8 @@ class CreateAccount extends Component {
     render() {
         const {formErrors} = this.state;
         return (
-            <div className="create-account-wrapper">
-                <div className="create-account-form-wrapper">
+            <div className="wrapper">
+                <div className="form-wrapper">
                     <h1>Create Account</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
                         <div className="firstName">
@@ -156,9 +156,11 @@ class CreateAccount extends Component {
                             )}
                         </div>
                         <div className="createAccount">
-                            <button type="submit">Create Account</button>
+                            <button><Nav.Link id="normal" href = "/createProfile">Create Account</Nav.Link></button>
                             <Styles>
-                                <small><Nav.Link href="/login">Already have an Account?</Nav.Link></small>
+                                <big>Already Have An Account?</big>
+                                <big><Nav.Link href="/login">Log In</Nav.Link></big>
+                                <big><Nav.Link href="/createProfile">Create Profile</Nav.Link></big>
                             </Styles>
                         </div>
                     </form>

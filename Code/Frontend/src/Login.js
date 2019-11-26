@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import "./Page.css"
+import "./Login.css"
 import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
+import firebase from 'firebase';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+
+firebase.initializeApp({
+    apiKey: "AIzaSyDIi8P1tuPgJ41M8EjHLNTEEzF0MsUZjXM",
+    authDomain:"pick-up-sportz-89c6e.firebaseapp.com"
+})
 
 const Styles = styled.div `
     .nav-link {
-        color: black;
-        text-align: center;
+        color: green;
         &:hover{
             color: red;
         }
@@ -80,13 +86,29 @@ class Login extends Component {
 
         this.setState({formErrors, [name]: value}, () => console.log(this.state))
     }
+    state={isSignedIn:false}
+    uiConfig = {
+        signInFlow: "popup",
+        signInOptions: [
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID
+        ],
+        callbacks: {
+            signInSuccess: () => false
+        }
+    }
 
+    componentDidMount = () =>{
+
+        firebase.auth().onAuthStateChanged(user =>{
+            this.setState({isSignedIn: !!user})
+        })
+    }
     render() {
         const {formErrors} = this.state;
         return (
-            <div className="login-wrapper">
-                <div className="login-form-wrapper">
-                    <h1>Login</h1>
+            <div className="wrapper">
+                <div className="form-wrapper">
+                    <h1>Log In</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
                         <div className="email">
                             <label htmlFor="email">Email</label>
@@ -117,10 +139,22 @@ class Login extends Component {
                             )}
                         </div>
                         <div className="login">
+                            {this.state.isSignedIn ? (
+                                <span>
+                                    <div>Signed in!</div>
+                                    <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
+                                </span>
+                            ) :
+                            (<StyledFirebaseAuth
+                                uiConfig={this.uiConfig}
+                                firebaseAuth={firebase.auth()}
+                                />
+                            )
+                        }
                             <button type="submit">Sign In</button>
                             <Styles>
-                                <small><Nav.Link href="/createAccount">Don't have an Account?</Nav.Link></small>
-                                <small><Nav.Link href="/passwordRecovery">Forgot Password?</Nav.Link></small>
+                                <big><Nav.Link href="/createAccount">Don't have an Account?</Nav.Link></big>
+                                <big><Nav.Link href="/passwordRecovery">Forgot Password?</Nav.Link></big>
                             </Styles>
                         </div>
                     </form>
@@ -129,5 +163,4 @@ class Login extends Component {
         );
     }
 }
-
 export default Login;

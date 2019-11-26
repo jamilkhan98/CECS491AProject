@@ -1,6 +1,6 @@
 import React from 'react';
 import SimpleBarReact from "simplebar-react";
-import "./Page.css"
+import "./Schedule.css"
 import "simplebar/src/simplebar.css";
 import { Button } from 'react-bootstrap';
 
@@ -23,4 +23,3 @@ export const Schedule = () => (
         </div>
     </div>
 )
-
