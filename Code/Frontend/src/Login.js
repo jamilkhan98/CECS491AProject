@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import "./Login.css"
 import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
-import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-
-firebase.initializeApp({
-    apiKey: "",
-    authDomain:"pick-up-sportz-89c6e.firebaseapp.com"
-})
+import firebase from './Firestore';
 
 const Styles = styled.div `
     .nav-link {
@@ -66,6 +61,7 @@ class Login extends Component {
         } else {
             console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
         }
+        
     };
 
     handleChange = e => {
