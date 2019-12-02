@@ -1,7 +1,7 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDIi8P1tuPgJ41M8EjHLNTEEzF0MsUZjXM",
+    apiKey: "",
     authDomain: "pick-up-sportz-89c6e.firebaseapp.com",
     databaseURL: "https://pick-up-sportz-89c6e.firebaseio.com",
     projectId: "pick-up-sportz-89c6e",
