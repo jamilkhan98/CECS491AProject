@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import "./CreateAccount.css"
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
+import firebase from "./Firestore";
+import { thisTypeAnnotation } from '@babel/types';
 
 const Styles = styled.div `
     .nav-link {
@@ -38,10 +40,10 @@ class CreateAccount extends Component {
         super(props);
 
         this.state = {
-            firstName: null,
-            lastName: null,
-            email: null,
-            password: null,
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
             formErrors:{
                 firstName: "",
                 lastName: "",
@@ -53,6 +55,26 @@ class CreateAccount extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        const db = firebase.firestore();
+        const userRef = db.collection("users").add({
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then(function(docRef){
+            console.log("Doc written with IDL ", docRef.id);
+        })
+        .catch(function(error){
+            console.error("Error adding: ", error);
+        });
+        this.setState({
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: ""
+
+        });
 
         if(formValid(this.state)){
             console.log(`
@@ -108,6 +130,7 @@ class CreateAccount extends Component {
                                 name="firstName"
                                 noValidate
                                 onChange={this.handleChange}
+                                value={this.state.firstName}
                             />
                             {formErrors.firstName.length > 0 && (
                                 <span className="errorMessage">{formErrors.firstName}</span>
@@ -122,6 +145,7 @@ class CreateAccount extends Component {
                                 name="lastName"
                                 noValidate
                                 onChange={this.handleChange}
+                                value={this.state.lastname}
                             />
                             {formErrors.lastName.length > 0 && (
                                 <span className="errorMessage">{formErrors.lastName}</span>
@@ -136,6 +160,7 @@ class CreateAccount extends Component {
                                 name="email"
                                 noValidate
                                 onChange={this.handleChange}
+                                value={this.state.email}
                             />
                             {formErrors.email.length > 0 && (
                                 <span className="errorMessage">{formErrors.email}</span>
@@ -150,13 +175,14 @@ class CreateAccount extends Component {
                                 name="password"
                                 noValidate
                                 onChange={this.handleChange}
+                                value={this.state.password}
                             />
                             {formErrors.password.length > 0 && (
                                 <span className="errorMessage">{formErrors.password}</span>
                             )}
                         </div>
                         <div className="createAccount">
-                            <button><Nav.Link id="normal" href = "/createProfile">Create Account</Nav.Link></button>
+                            <button onClick={this.handleSubmit}><Nav.Link id="normal" href = "/createProfile">Create Account</Nav.Link> </button>
                             <Styles>
                                 <big>Already Have An Account?</big>
                                 <big><Nav.Link href="/login">Log In</Nav.Link></big>
