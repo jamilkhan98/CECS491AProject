@@ -55,7 +55,7 @@ class CreateAccount extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const db = firebase.firestore();
+        const db = firebase.firestore(); //chaz {
         const userRef = db.collection("users").add({
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -74,7 +74,7 @@ class CreateAccount extends Component {
             email: "",
             password: ""
 
-        });
+        });// }
 
         if(formValid(this.state)){
             console.log(`
