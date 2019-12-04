@@ -55,7 +55,7 @@ class CreateEvent extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const db = firebase.firestore();
+        const db = firebase.firestore();// chaz {
         const eventRef = db.collection("events").add({
             title: this.state.title,
             sport: this.state.sport,
@@ -77,7 +77,7 @@ class CreateEvent extends Component {
             date: "",
             startTime: "",
             endTime: ""
-        });
+        });// }
 
         if(formValid(this.state)){
             console.log(`
