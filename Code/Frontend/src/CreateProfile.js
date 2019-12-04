@@ -3,15 +3,6 @@ import "./CreateProfile.css"
 import styled, { keyframes } from 'styled-components';
 import { Nav } from 'react-bootstrap';
 
-{/*import { flash } from 'react-animations';
- 
-const flashAnimation = keyframes`${flash}`;
- 
-const FlashyButton = styled.span`
-  animation: 5s ${flashAnimation} infinite;
-`;
-*/}
-
 const Styles = styled.div `
     .nav-link {
         color: green;
