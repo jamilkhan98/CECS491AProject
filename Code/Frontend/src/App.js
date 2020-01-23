@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './Home';
 import { About } from './About';
@@ -18,23 +18,39 @@ import {Schedule} from './Schedule';
 import firebase from 'firebase';
 
 class App extends Component {
-    state={isSignedIn:false}
-    uiConfig = {
-        signInFlow: "popup",
-        signInOptions: [
-            firebase.auth.GoogleAuthProvider.PROVIDER_ID
-        ],
-        callbacks: {
-            signInSuccess: () => false
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+  }
 
-    componentDidMount = () =>{
+  callAPI() {
+    fetch("http://localhost:9000/testAPI")
+      .then(res => res.text())
+      .then(res => this.setState({ apiResponse: res }));
+  }
 
-        firebase.auth().onAuthStateChanged(user =>{
-            this.setState({isSignedIn: !!user})
-        })
-    }
+  componentWillMount() {
+    this.callAPI();
+  }
+
+  state={isSignedIn:false}
+  uiConfig = {
+      signInFlow: "popup",
+      signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID
+      ],
+      callbacks: {
+          signInSuccess: () => false
+      }
+  }
+
+  componentDidMount = () =>{
+      this.callAPI();
+
+      firebase.auth().onAuthStateChanged(user =>{
+          this.setState({isSignedIn: !!user})
+      })
+  }
 
   render(){
     return (

@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import "./Login.css"
 import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
+import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from './Firestore';
+
+firebase.initializeApp({
+    apiKey: "AIzaSyDIi8P1tuPgJ41M8EjHLNTEEzF0MsUZjXM",
+    authDomain:"pick-up-sportz-89c6e.firebaseapp.com"
+})
 
 const Styles = styled.div `
     .nav-link {
@@ -61,7 +66,6 @@ class Login extends Component {
         } else {
             console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
         }
-        
     };
 
     handleChange = e => {
@@ -137,8 +141,7 @@ class Login extends Component {
                         <div className="login">
                             {this.state.isSignedIn ? (
                                 <span>
-                                    <div>Signed in!</div>
-                                    <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
+                                    <button id="big" onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
                                 </span>
                             ) :
                             (<StyledFirebaseAuth

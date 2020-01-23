@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import "./CreateEvent.css"
 import styled from 'styled-components';
-import { Form, Col, Nav } from 'react-bootstrap';
-import firebase from './Firestore'
-
-const Styles = styled.div `
-    .nav-link {
-        color: green;
-
-        &:hover{
-            color: red;
-        }
-    }
-`;
 
 const formValid = ({formErrors, ...rest}) => {
     let valid = true;
@@ -36,12 +24,12 @@ class CreateEvent extends Component {
         super(props);
         
         this.state = {
-            title: "",
-            sport: "",
-            location: "",
-            date: "",
-            startTime: "",
-            endTime: "",
+            title: null,
+            sport: null,
+            location: null,
+            date: null,
+            startTime: null,
+            endTime: null,
             formErrors:{
                 title: "",
                 sport: "",
@@ -55,29 +43,6 @@ class CreateEvent extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const db = firebase.firestore();// chaz {
-        const eventRef = db.collection("events").add({
-            title: this.state.title,
-            sport: this.state.sport,
-            location: this.state.location,
-            date: this.state.date,
-            startTime: this.state.startTime,
-            endTime: this.state.endTime
-        })
-        .then(function(docRef){
-            console.log("Doc written with IDL ", docRef.id);
-        })
-        .catch(function(error){
-            console.error("Error adding: ", error);
-        });
-        this.setState({
-            title: "",
-            sport: "",
-            location: "",
-            date: "",
-            startTime: "",
-            endTime: ""
-        });// }
 
         if(formValid(this.state)){
             console.log(`
@@ -119,7 +84,7 @@ class CreateEvent extends Component {
             <div className="wrapper">
                 <div className="event-form-wrapper">
                     <h1>Create Event</h1>
-                    <form onSubmit={this.handleSubmit} noValidate>
+                    <form onSubmit="{this.handleSubmit}" action="http://localhost:9000/testAPI/createEvent" noValidate>
                         <div className="title">
                             <label htmlFor="title">Title</label>
                             <input 
@@ -129,7 +94,6 @@ class CreateEvent extends Component {
                                 name="title"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.title}
                             />
                             {formErrors.title.length > 0 && (
                                 <span className="errorMessage">{formErrors.title}</span>
@@ -144,7 +108,6 @@ class CreateEvent extends Component {
                                 name="sport"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.sport}
                             />
                         
                             {formErrors.sport.length > 0 && (
@@ -161,7 +124,6 @@ class CreateEvent extends Component {
                                 name="location"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.location}
                             />
                         
                             {formErrors.location.length > 0 && (
@@ -178,7 +140,6 @@ class CreateEvent extends Component {
                                 name="date"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.date}
                             />
                             {formErrors.date.length > 0 && (
                                 <span className="errorMessage">{formErrors.date}</span>
@@ -194,7 +155,6 @@ class CreateEvent extends Component {
                                 name="startTime"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.startTime}
                             />
                             {formErrors.startTime.length > 0 && (
                                 <span className="errorMessage">{formErrors.startTime}</span>
@@ -209,14 +169,13 @@ class CreateEvent extends Component {
                                 name="endTime"
                                 noValidate
                                 onChange={this.handleChange}
-                                value={this.state.endTime}
                             />
                             {formErrors.endTime.length > 0 && (
                                 <span className="errorMessage">{formErrors.endTime}</span>
                             )}
                         </div>
                         <div className="createEvent">
-                            <button type="submit">Create Event</button>
+                            <button>Create Event</button>
                         </div>
                     </form>
                 </div>

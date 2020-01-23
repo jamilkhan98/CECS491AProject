@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./CreateProfile.css"
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
 
 const Styles = styled.div `

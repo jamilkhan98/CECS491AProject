@@ -2,7 +2,6 @@ import React from 'react';
 import SimpleBarReact from "simplebar-react";
 import "./Schedule.css"
 import "simplebar/src/simplebar.css";
-import { Button } from 'react-bootstrap';
 
 export const Schedule = () => (
     <div>
@@ -12,7 +11,7 @@ export const Schedule = () => (
                 <SimpleBarReact style={{ maxHeight: 800 }}>
                     <div className="schedule">
                         {[...Array(50)].map((x, i) => (
-                            <button type="submit">Event #{i}</button>
+                            <button type="submit">Event #{i+1}</button>
                         ))}
                     </div>
                 </SimpleBarReact>
