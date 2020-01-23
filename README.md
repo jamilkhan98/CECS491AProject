@@ -1,9 +1,9 @@
-# CECS491AProject
-Senior Project for CECS 491A
+# CECS491B Project
+Senior Project for CECS 491B
 
-Start Date: 8/26/19
+Start Date: 1/22/20
 
-End Date: 12/10/19
+End Date: 5/8/2
 
 Sprint Board: https://trello.com/b/QTGQIW4x/sprint-board-sprint-0
 
