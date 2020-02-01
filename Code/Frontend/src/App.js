@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from './Home';
-import { About } from './About';
-import { Contact } from './Contact';
-import CreateAccount  from './CreateAccount';
-import { NoMatch } from './NoMatch';
-import { Layout } from './components/Layout';
-import { NavigationBar } from './components/NavigationBar';
-import { Jumbotron } from './components/Jumbotron';
-import Login  from './Login';
-import PasswordRecovery from './PasswordRecovery';
-import CreateProfile from './CreateProfile';
-import { LoggedInNavBar } from './components/LoggedInNavBar';
-import CreateEvent from './CreateEvent';
-import {Schedule} from './Schedule';
+import { Home } from './components/Home';
+import { About } from './components/About';
+import { Contact } from './components/Contact';
+import CreateAccount  from './components/CreateAccount';
+import { NoMatch } from './components/NoMatch';
+import { Layout } from './components/Header/Layout';
+import { NavigationBar } from './components/Header/NavigationBar';
+import { Jumbotron } from './components/Header/Jumbotron';
+import Login  from './components/Login';
+import PasswordRecovery from './components/PasswordRecovery';
+import CreateProfile from './components/CreateProfile';
+import { LoggedInNavBar } from './components/Header/LoggedInNavBar';
+import CreateEvent from './components/CreateEvent';
+import {Schedule} from './components/Schedule';
 
 import firebase from 'firebase';
 
