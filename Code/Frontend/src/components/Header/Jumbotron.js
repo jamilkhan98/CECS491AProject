@@ -4,6 +4,8 @@ import Tree from '../../assets/Tree.jpg';
 import Field from '../../assets/Field1.png';
 import Baseball from '../../assets/Baseball.jpg';
 import Equipment from '../../assets/Equipment.jpg';
+import Tennis from '../../assets/Tennis.png';
+
  
 export const Jumbotron = () => (
     
@@ -19,7 +21,7 @@ export const Jumbotron = () => (
             <img
                 className="d-cover w-100"
                 src={Field}
-                alt="Second slide"
+                alt="Third slide"
             />
         </Carousel.Item>
         <Carousel.Item>
@@ -33,7 +35,7 @@ export const Jumbotron = () => (
             <img
                 className="d-cover w-100"
                 src={Equipment}
-                alt="Fourth slide"
+                alt="Fifth slide"
             />
         </Carousel.Item>
     </Carousel>

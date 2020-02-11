@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './components/Home';
 import { About } from './components/About';
@@ -14,43 +14,28 @@ import CreateProfile from './components/CreateProfile';
 import { LoggedInNavBar } from './components/Header/LoggedInNavBar';
 import CreateEvent from './components/CreateEvent';
 import {Schedule} from './components/Schedule';
+import PopUpAccount from './components/PopUpAccount';
 
 import firebase from 'firebase';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
+    state={isSignedIn:false}
+    uiConfig = {
+        signInFlow: "popup",
+        signInOptions: [
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID
+        ],
+        callbacks: {
+            signInSuccess: () => false
+        }
+    }
 
-  callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
-  }
+    componentDidMount = () =>{
 
-  componentWillMount() {
-    this.callAPI();
-  }
-
-  state={isSignedIn:false}
-  uiConfig = {
-      signInFlow: "popup",
-      signInOptions: [
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID
-      ],
-      callbacks: {
-          signInSuccess: () => false
-      }
-  }
-
-  componentDidMount = () =>{
-      this.callAPI();
-
-      firebase.auth().onAuthStateChanged(user =>{
-          this.setState({isSignedIn: !!user})
-      })
-  }
+        firebase.auth().onAuthStateChanged(user =>{
+            this.setState({isSignedIn: !!user})
+        })
+    }
 
   render(){
     return (
