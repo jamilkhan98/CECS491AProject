@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import "./CreateAccount.css"
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
+import firebase from "./Firestore";
+import { thisTypeAnnotation } from '@babel/types';
+import PopUpAccount from './PopUpAccount'
 
 const Styles = styled.div `
     .nav-link {
@@ -38,10 +41,10 @@ class CreateAccount extends Component {
         super(props);
 
         this.state = {
-            firstName: null,
-            lastName: null,
-            email: null,
-            password: null,
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
             formErrors:{
                 firstName: "",
                 lastName: "",
@@ -51,8 +54,33 @@ class CreateAccount extends Component {
         };
     }
 
-    handleSubmit = e =>{
+    state = {
+        isOpen: false
+    }
+    handleSubmit = e => {
+        
         e.preventDefault();
+        const db = firebase.firestore();
+        const userRef = db.collection("users").add({
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then(function(docRef){
+            console.log("Doc written with IDL ", docRef.id);
+        })
+        .catch(function(error){
+            console.error("Error adding: ", error);
+        });
+        this.setState({
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: ""
+
+        });
+
         if(formValid(this.state)){
             console.log(`
                 --SUBMITTING--
@@ -64,6 +92,8 @@ class CreateAccount extends Component {
         } else {
             console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
         }
+
+
     };
 
     handleChange = e => {
@@ -97,16 +127,17 @@ class CreateAccount extends Component {
             <div className="wrapper">
                 <div className="form-wrapper">
                     <h1>Create Account</h1>
-                    <form method="post" onSubmit= "{this.handleSubmit}" action="http://localhost:9000/testAPI/createAccount" noValidate>
+                    <form onSubmit={this.handleSubmit} noValidate>
                         <div className="firstName">
                             <label htmlFor="firstName">First Name</label>
                             <input 
-                                name="firstName"
-                                type="text"
+                                className={formErrors.firstName.length > 0 ? "error" : null}
                                 placeholder="First Name"
-                                required
-                                className={formErrors.firstName.length > 0 ? "error" : null}                         
+                                type="text"
+                                name="firstName"
+                                noValidate
                                 onChange={this.handleChange}
+                                value={this.state.firstName}
                             />
                             {formErrors.firstName.length > 0 && (
                                 <span className="errorMessage">{formErrors.firstName}</span>
@@ -115,12 +146,13 @@ class CreateAccount extends Component {
                         <div className="lastName">
                             <label htmlFor="lastName">Last Name</label>
                             <input 
-                                name="lastName"
-                                type="text"
-                                placeholder="Last Name"
-                                required
                                 className={formErrors.lastName.length > 0 ? "error" : null}
+                                placeholder="Last Name"
+                                type="text"
+                                name="lastName"
+                                noValidate
                                 onChange={this.handleChange}
+                                value={this.state.lastname}
                             />
                             {formErrors.lastName.length > 0 && (
                                 <span className="errorMessage">{formErrors.lastName}</span>
@@ -129,12 +161,13 @@ class CreateAccount extends Component {
                         <div className="email">
                             <label htmlFor="email">Email</label>
                             <input 
-                                name="email"
-                                type="email"
-                                placeholder="Email"
-                                required
                                 className={formErrors.email.length > 0 ? "error" : null}
+                                placeholder="Email"
+                                type="email"
+                                name="email"
+                                noValidate
                                 onChange={this.handleChange}
+                                value={this.state.email}
                             />
                             {formErrors.email.length > 0 && (
                                 <span className="errorMessage">{formErrors.email}</span>
@@ -142,25 +175,29 @@ class CreateAccount extends Component {
                         </div>
                         <div className="password">
                             <label htmlFor="password">Password</label>
-                            <input
-                                name="password"
-                                type="password"
-                                placeholder="Password"
-                                required
+                            <input 
                                 className={formErrors.password.length > 0 ? "error" : null}
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                noValidate
                                 onChange={this.handleChange}
+                                value={this.state.password}
                             />
                             {formErrors.password.length > 0 && (
                                 <span className="errorMessage">{formErrors.password}</span>
                             )}
                         </div>
                         <div className="createAccount">
-                            <button>{/*<Nav.Link id="normal" href = "/createProfile">*/}Create Account{/*</Nav.Link>*/}</button>
+                            <button onClick={this.handleSubmit}><Nav.Link id="normal" href = "/createProfile">Create Account</Nav.Link> </button>
                             <Styles>
                                 <big>Already Have An Account?</big>
                                 <big><Nav.Link href="/login">Log In</Nav.Link></big>
                                 <big><Nav.Link href="/createProfile">Create Profile</Nav.Link></big>
                             </Styles>
+                            <PopUpAccount isOpen={this.state.isOpen}>
+                                Created Account Successfully!!
+                            </PopUpAccount>
                         </div>
                     </form>
                 </div>
