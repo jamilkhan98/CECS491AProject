@@ -1,7 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### READ AFTER DOWNLOADING FILES!
 
-## Available Scripts
+Steps to make sure the code runs correctly:
+  1. Download code to a specific folder.
+  2. Open command prompt and Travel to the folder that shows src and public folders
+  3. Enter `npm run build`. (Should return errors, if not then you are all set.)
+  4. If there are errors, type `npm install react-scripts`.
+  5. Run audit only if it asks you to. `npm audit fix` (if it says its needed).
+  6. Enter `npm run build`. You should be good to go.
+  7. If not, when you do the above command it will tell you what package needs to be installed. Install all the pakages until 
+     `npm run build`compiles successfully.
 
+
+### Other stuff
 In the project directory, you can run:
 
 ### `npm start`
