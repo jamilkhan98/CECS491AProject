@@ -15,6 +15,7 @@ import { LoggedInNavBar } from './components/Header/LoggedInNavBar';
 import CreateEvent from './components/CreateEvent';
 import {Schedule} from './components/Schedule';
 import PopUpAccount from './components/PopUpAccount';
+import Profile from './components/Profile';
 
 import firebase from 'firebase';
 
@@ -60,6 +61,7 @@ class App extends Component {
                 <Route path="/createProfile" component={CreateProfile} />
                 <Route path="/createEvent" component={CreateEvent} />
                 <Route path="/schedule" component={Schedule} />
+                <Route path="/profile" component={Profile} />
                 <Route component={NoMatch} />
               </Switch>
             </Router>
