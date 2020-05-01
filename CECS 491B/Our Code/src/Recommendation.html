@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sport Recommendation</h2>
+
+<button onclick="myFunction()">Try it</button>
+<!--  -->
+
+<p id="demo"></p>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+
+  function myFunction() {
+
+
+  var txt;
+  var height = prompt("Please enter your height(inches):", "");
+  var weight = prompt("Please enter your weight(lbs):", "");
+  if (height == null || height == "" || weight == null || weight == "" ) {
+    txt = "Please enter correctly";
+  } else {
+    txt = "Given your height of " + height + " inches and weight " + weight + " pounds, we recommend you play... \n";
+  }
+
+  $("#demo").html(txt);
+
+//not working, goal is to run python file but it returns the actual file
+  $.ajax({
+               type:"GET",
+               url:"DecisionTree.py",
+               dataType:"text",
+               success: function(msg){
+                  alert(txt + msg)
+                }
+       });
+
+
+
+}
+</script>
+
+</body>
+</html>

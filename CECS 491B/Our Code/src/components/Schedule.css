@@ -1,0 +1,85 @@
+.schedule-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#schedule-thead{
+  background-color: seagreen;
+  color: white;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+
+#schedule-tbody td{
+  text-align: center;
+}
+
+#schedule-thead th a{
+  color: white;
+}
+
+#schedule-thead th a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#attendeeList {
+  text-align: left;
+  margin: 5% 20%;
+}
+
+#noEvents{
+  text-align: center;
+  margin: auto;
+}
+
+.newEvent {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.newEvent button {
+  background-color: seagreen;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 33%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.newEvent button:hover {
+  color: #519e8a;
+  background-color: #e6fed0;
+  border: 2px solid #519e8a;
+}
+
+#hidden{
+  width: 20%;
+}
+
+#confirmForm{
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  width: 30vw;
+  padding: 5%;
+  background-color: #d8d8da;
+  border-radius: 15px;
+  border: outset #e6e6e6;
+}
+
+#eventInfo {
+  background-color: seagreen;
+  color: white;
+}

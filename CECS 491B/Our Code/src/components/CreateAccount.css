@@ -1,0 +1,224 @@
+/* Colors */
+/*
+dark blue: #476A6F
+light blue: #258EA6
+dark green: #519E8A
+medium green: #7EB09B
+light green: #A3C4BC
+*/
+
+.newAccount-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-form-wrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 1px solid #111;
+  background-color: #ffffff;
+}  
+
+.email,
+.password,
+.confirmPass {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.profile-form-wrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 1px solid #111;
+  background-color: #ffffff;
+}
+
+#profileForm input {
+  padding: 0px 10px;
+  border-radius: 0px;
+  outline: none;
+  border: 1px solid black;
+}
+ 
+#profileForm input::placeholder {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: black;
+}
+
+#profileForm input.error,
+#profileForm select.error {
+  border: 1px solid red;
+}
+
+.firstName,
+.state,
+.city {
+  margin-right: 1%;
+}
+
+.lastName,
+.state,
+.sport{
+  margin-left: 4%;
+}
+
+.lastName{
+  margin-right: 1%;
+}
+
+.ZIPCode{
+  margin-left: 4%;
+}
+
+.firstName,
+.lastName,
+.city,
+.state,
+.ZIPCode,
+.sport{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+
+.firstName,
+.lastName {
+  width: 30%;
+}
+
+.city,
+.state,
+.ZIPCode,
+.sport{
+  width: 30%;
+}
+
+.createAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saveChanges {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createAccount button,
+.saveChanges button {
+  background-color: seagreen;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 50%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.createAccount button:hover,
+.saveChanges button:hover {
+  color: #519e8a;
+  background-color: #e6fed0;
+  border: 2px solid #519e8a;
+}
+
+.createAccount big,
+.saveChanges big {
+  color: #999;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.link {
+  color: green;
+  background-color: white;
+}
+  
+.link:hover{
+  color: red;
+  text-decoration: none;
+}
+
+#required {
+  color: gray;
+  margin: auto;
+}
+
+#linkDivide {
+  border:solid 1px seagreen;
+  width: 96%;
+  background-color: seagreen;
+  height: 1px;
+}
+ 
+/* can move to App.css, must check all CSS*/
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  h1 {
+    text-align: center;
+    width: 100%;
+    color: #111;
+    font-weight: lighter;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  label {
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+    color: #222;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  input::placeholder {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #999;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  input.error {
+    border: 1px solid red;
+  }
+  
+  /* can move to App.css, must check all CSS*/
+  .errorMessage {
+    color: red;
+    font-size: 0.75em;
+    display: relative;
+  }
